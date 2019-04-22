@@ -1,0 +1,19 @@
+.qs
+  &-datepicker
+    width: 100%
+    min-width: 240px
+    .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover
+      background-color: #1dd2af
+  &-controls
+    padding: 10px
+    background-color: white !important
+  &-squares
+    .qs-day
+      +font-light
+      color: rgba(#1dd2af, .7) !important
+
+
+@media ($xxs-down)
+  .qs-datepicker
+    left: unset !important
+    right: 0 !important

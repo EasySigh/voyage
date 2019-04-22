@@ -1,0 +1,7 @@
+// Generate classes: w-(xs-xl)-(25-100) [.w-xs-25 to .w-xl-100]
+//I use here sass map from bootstrap (variables.scss) - $sizes and $grid-breakpoints
+@each $screen, $proportion in $grid-breakpoints
+  @media (min-width: #{$proportion})
+    @each $size, $width in $sizes
+      .w-#{$screen}-#{$size}
+        width: $width !important

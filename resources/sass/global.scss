@@ -1,0 +1,17 @@
+// general variables and colors
+// @import "base/general_variables.scss";
+
+// base
+@import "base/variables_maps";
+@import "base/mixins";
+@import "base/typography";
+@import "base/assets";
+@import "base/main";
+@import "base/responsive";
+
+//pages
+@import "pages/home_page";
+
+// modules
+@import "modules/footer";
+@import "modules/datepicker";

@@ -1,0 +1,128 @@
+// Var instead 
+$xxs-up: 'min-width: 320px'
+$sm-up: 'min-width: 576px'
+$md-up: 'min-width: 768px'
+$lg-up: 'min-width: 992px'
+$xl-up: 'min-width: 1200px'
+
+$xxs-down: 'max-width: 374.98px'
+$xs-down: 'max-width: 575.98px'
+$sm-down: 'max-width: 767.98px'
+$md-down: 'max-width: 991.98px'
+$lg-down: 'max-width: 1199.98px'
+
+@media ($xxs-down)
+  .carousel
+    a[class^="carousel-control"]:not(span)
+      height: 4rem
+      width: 4rem
+
+@media ($xs-down)
+  main
+    .footer
+      padding: 1rem
+
+@media ($sm-down)
+  main
+    nav .navbar-nav
+      text-align: center
+    .carousel
+      &-item
+        &__article
+          height: 100%
+          width: 100%
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          padding: 0 1.5rem
+          left: unset !important
+          transform: translateY(-50%) !important
+          button
+            font-size: 1.6rem
+            margin-top: 4rem
+            &+button
+              margin-top: 2rem
+
+@media ($md-down)
+  .carousel
+    &-item
+      &__article
+        h1
+          font-size: 4rem  !important
+        h3
+          font-size: 2rem  !important
+  .footer
+    &>*
+      text-align: center
+    &__newsletter
+      order: 1
+    &__contact
+      order: 2
+    &__news
+      order: 3
+    &__tags
+      order: 4
+
+@media ($sm-up)
+  main
+    .find
+      &__article
+        display: flex
+        flex-direction: column
+        justify-content: center
+        border-right: 1px solid #415569
+        &:after, &:before
+          content: ''
+          display: block
+          position: absolute
+          width: 0
+          height: 0
+          top: 50%
+          transform: translateY(-50%)
+          border-color: transparent transparent transparent #415569
+          border-style: solid
+        &:after
+          left: 100%
+          border-width: 8px
+        &:before
+          left: calc(100% - 1px)
+          border-width: 7px
+          z-index: 2
+          border-left-color: #5e6b78
+      &__search
+        &__group
+          flex: 0 0 100%
+        // &__btn
+
+@media ($lg-up)
+  main
+    .carousel
+      &-item
+        &__article
+          button
+            margin-top: 4.5rem
+            &+button
+              margin-left: 3rem
+    .find
+      form
+        justify-content: space-between
+      &__search
+        &__group
+          flex: 0 0 45%
+          max-width: 45%
+
+@media ($xl-up)
+  main
+    .find
+      form
+        justify-content: start
+        align-items: center
+      &__search
+        &__group
+          flex: 0 0 40%
+          max-width: 40%
+          justify-content: start
+        &__btn
+          flex: 10%
+          max-width: 10%

@@ -1,0 +1,28 @@
+// Maps
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$sizes: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+  auto: auto
+);
+
+@media (max-height: 374.98px) and (orientation: landscape) {
+  main {
+    .carousel-item, .carousel img {
+      height: calc(100vh);
+    }
+    .navbar-nav {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+}
